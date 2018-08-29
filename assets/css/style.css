@@ -1,0 +1,52 @@
+html{
+    height:100vh;
+}
+
+body{
+    text-align: center;
+   height: 100vh;
+   
+    
+}
+
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 6rem;
+    color: white;
+    text-shadow: -2px 0 green, 0 3px green, 2px 0 green, 0 -2px green;
+    
+}
+
+.outer{
+    min-height: 100%;
+    margin: 0;
+    background: url("../images/fruittree.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.inner{
+    background-color: aqua;
+}
+
+.options{
+    background-color: green;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.radio{
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#l1, #answerRight, #answerWrong{
+    display: none;
+}
