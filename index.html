@@ -41,35 +41,51 @@
                 <button id="start" class="btn btn-success">Let the quizzes begin!</button>
             </div>
 
+            <div id="Intro">
+                <h3 id="IntroHeading"></h3>
+                <br>
+                <h4 id="Category"></h4>
+                <br>
+                <div class="container options">
+                    <strong>
+                        <p id="firstp"></p>
+                    </strong>
+                    <p id="secondp"></p>
+                </div>
+                <br>
+                <button id="startl" class="btn btn-success">Begin!</button>
+
+            </div>
+
             <div id="l1">
                 <h3 id="l1Heading">Level 1, Question 1</h3>
                 <br>
-                <h4 id="l1Question">What is the fruit in this picture?</h4>
+                <h4 id="l1Question">Name the fruit in this picture.</h4>
                 <br>
                 <div class="container options">
                     <img id="fruitimg" class="float-right" src="assets/images/dragonfruit.jpg" alt="Fruit" width="160px" height="160px">
                     <form id="myForm">
                         <div class="radio">
                             <label>
-                                <input id="radiobtn1" class="radiobtn" type="radio" name="l1q1" value="Prickly Pear">
+                                <input class="radiobtn radiobtn1" type="radio" name="l1q1" value="Prickly Pear">
                                 <span id="option1">Prickly Pear</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn2" class="radiobtn" type="radio" name="l1q1" value="Horned Melon">
-                                <span id="option2">Horned Melon</span>
+                                <input class="radiobtn radiobtn2" type="radio" name="l1q1" value="Rambutan">
+                                <span id="option2">Rambutan</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn3" class="radiobtn" type="radio" name="l1q1" value="Dragonfruit">
+                                <span class="replace"><input class="radiobtn radiobtn3" type="radio" name="l1q1" value="Dragonfruit"></span>
                                 <span id="option3">Dragonfruit</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn4" class="radiobtn" type="radio" name="l1q1" value="Guava">
+                                <input class="radiobtn radiobtn4" type="radio" name="l1q1" value="Guava">
                                 <span id="option4">Guava</span>
                             </label>
                         </div>
@@ -82,33 +98,33 @@
             <div id="answerScreen">
                 <h3 id="l1HeadingAnswer"></h3>
                 <br>
-                <h4 id="l1Result"></h4>
+                <h4 class="result"></h4>
                 <br>
                 <div class="container options">
                     <img id="fruitimgAnswer" class="float-right" alt="Fruit" width="160px" height="160px">
-                    <form id="myForm">
+                    <form id="myFormAnswer">
                         <div class="radio">
                             <label>
-                                <input id="radiobtn1Answer" class="radiobtn" type="radio">
-                                <span id="option1Answer">Banana</span>
+                                <input class="radiobtn radiobtn1Answer" type="radio">
+                                <span class="option1Answer">Banana</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn2Answer" class="radiobtn" type="radio">
-                                <span id="option2Answer">Apple</span>
+                                <input class="radiobtn radiobtn2Answer" type="radio">
+                                <span class="option2Answer">Apple</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn3Answer" class="radiobtn" type="radio">
-                                <span id="option3Answer">Pear</span>
+                                <input class="radiobtn radiobtn3Answer" type="radio">
+                                <span class="option3Answer">Pear</span>
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input id="radiobtn4Answer" class="radiobtn" type="radio">
-                                <span id="option4Answer">Papaya</span>
+                                <input class="radiobtn radiobtn4Answer" type="radio">
+                                <span class="option4Answer">Papaya</span>
                             </label>
                         </div>
                     </form>
@@ -117,7 +133,106 @@
                 <button class="btn btn-success next"></button>
             </div>
 
-            
+            <div id="resultsScreen">
+                <h3 id="resultsHeading"></h3>
+                <br>
+                <h4 id="verdict"></h4>
+                <br>
+                <div class="container options">
+                    <br>
+                    <p>You got:</p>
+                    <p>
+                        <span id="howManyRight"></span> Right</p>
+                    <p>and</p>
+                    <p>
+                        <span id="howManyWrong"></span> Wrong</p>
+                    <br>
+                    <h5 id="whatNext"></h5>
+                    <br>
+                    <button class="btn btn-success nextLevel"></button>
+
+                </div>
+
+            </div>
+
+            <div id="l2">
+                <h3 id="l2Heading">Level 2, Question 1</h3>
+                <br>
+                <h4 id="l2Question">The following are varieties of which fruit?</h4>
+                <br>
+                <div class="container options2">
+                    <form id="myForm2">
+                        <p id="varietyList"></p>
+                        <br>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn1" type="radio" name="l1q1" value="Apple">
+                                <span class="option1">Apple</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn2" type="radio" name="l1q1" value="Banana">
+                                <span class="option2">Banana</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn3" type="radio" name="l1q1" value="Peach">
+                                <span class="option3">Peach</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn4" type="radio" name="l1q1" value="Orange">
+                                <span class="option4">Orange</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <button class="btn btn-success answer2">Submit</button>
+            </div>
+
+            <div id="answerScreen2">
+                <h3 id="l2HeadingAnswer"></h3>
+                <br>
+                <h4 class="result"></h4>
+                <br>
+                <div class="container options2">
+                    <form id="myFormAnswer2">
+                        <p id="varietyListAnswer"></p>
+                        <br>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn1Answer" type="radio" name="l1q1" value="Apple">
+                                <span class="option1Answer">Apple</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn2Answer" type="radio" name="l1q1" value="Banana">
+                                <span class="option2Answer">Banana</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn3Answer" type="radio" name="l1q1" value="Peach">
+                                <span class="option3Answer">Peach</span>
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radiobtn radiobtn4Answer" type="radio" name="l1q1" value="Orange">
+                                <span class="option4Answer">Orange</span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <button class="btn btn-success next2">Submit</button>
+            </div>
+
 
 
 
@@ -135,212 +250,7 @@
 
 
 
-
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
-
-<script>
-
-    var rights = 0;
-    var wrongs = 0;
-    var questionsAnswered = 0;
-//<i class="fas fa-check"></i>
-    function getAnswerScreen(objArray) {
-        $("#l1").hide();
-        $("#answerScreen").show();
-        $("#l1HeadingAnswer").text(objArray[questionsAnswered].level);
-        
-        $("#fruitimgAnswer").attr("src", objArray[questionsAnswered].image);
-        $(".radiobtn").attr("name", objArray[questionsAnswered].name);
-     
-
-        $("#radiobtn1Answer").attr("value", objArray[questionsAnswered].options[0]);
-        $("#radiobtn2Answer").attr("value", objArray[questionsAnswered].options[1]);
-        $("#radiobtn3Answer").attr("value", objArray[questionsAnswered].options[2]);
-        $("#radiobtn4Answer").attr("value", objArray[questionsAnswered].options[3]);
-
-        $("#option1Answer").text(objArray[questionsAnswered].options[0]);
-        $("#option2Answer").text(objArray[questionsAnswered].options[1]);
-        $("#option3Answer").text(objArray[questionsAnswered].options[2]);
-        $("#option4Answer").text(objArray[questionsAnswered].options[3]);
-
-        $(".next").text(objArray[questionsAnswered].nextq);
-
-        if(objArray[questionsAnswered].isChecked && $(':checked').val() == objArray[questionsAnswered].answer){
-            $("#l1Result").text("Congratulations! That's correct!");
-            rights++;
-        } else{
-            $("#l1Result").text("Sorry! That's incorrect!");
-            wrongs++;
-
-        }
-        
-        
-        
-
-    }
-
-
-
-
-    function updatePage(objArray) {
-       $("#answerScreen").hide();
-       $("#l1").show();
-       $(".radiobtn").prop('checked', false);
-       $('.answer').prop('disabled', true);
-       console.log(objArray[questionsAnswered].answer);
-        console.log(objArray[questionsAnswered].image);
-        $("#l1Heading").text(objArray[questionsAnswered].level);
-        $("#l1Question").text(objArray[questionsAnswered].question);
-        $("#fruitimg").attr("src", objArray[questionsAnswered].image);
-        $(".radiobtn").attr("name", objArray[questionsAnswered].name);
-       
-
-        $("#radiobtn1").attr("value", objArray[questionsAnswered].options[0]);
-        $("#radiobtn2").attr("value", objArray[questionsAnswered].options[1]);
-        $("#radiobtn3").attr("value", objArray[questionsAnswered].options[2]);
-        $("#radiobtn4").attr("value", objArray[questionsAnswered].options[3]);
-        console.log($("#radiobtn1").attr("value"));
-        console.log(objArray[questionsAnswered].options[0]);
-
-        $("#option1").text(objArray[questionsAnswered].options[0]);
-        $("#option2").text(objArray[questionsAnswered].options[1]);
-        $("#option3").text(objArray[questionsAnswered].options[2]);
-        $("#option4").text(objArray[questionsAnswered].options[3]);
-
-    };
-
-
-    function check(objArray) {
-        objArray[questionsAnswered].isChecked = true;
-        $('.answer').prop('disabled', false);
-        console.log(objArray[questionsAnswered].isChecked);
-    };
-
-    
-
-    
-
-
-    var l1 = [
-        l1q1 = {
-            name: "l1q1",
-            level: "Level 1, Question 1",
-            question: "What is this fruit in the picture?",
-            options: ["Prickly Pear", "Horned Melon", "Dragonfruit", "Guava"],
-            nextq: "Question 2",
-            image: "assets/images/dragonfruit.jpg",
-            answer: "Dragonfruit",
-            isChecked: false
-        },
-
-        l1q2 = {
-            name: "l1q2",
-            level: "Level 1, Question 2",
-            question: "What is this fruit in the picture?",
-            options: ["Dragonfruit", "Papaya", "Guava", "Persimmon"],
-            nextq: "Question 3",
-            image: "assets/images/papaya.jpg",
-            answer: "Papaya",
-            isChecked: false
-        },
-
-        l1q3 = {
-            name: "l1q3",
-            level: "Level 1, Question 3",
-            question: "What is this fruit in the picture",
-            options: ["Horned Melon", "Persimmon", "Jackfruit", "Prickly Pear"],
-            nextq: "Question 4",
-            image: "assets/images/pricklypear.jpg",
-            answer: "Prickly Pear",
-            isChecked: false
-        },
-
-        l1q4 = {
-            name: "l1q4",
-            level: "Level 1, Question 4",
-            question: "What is this fruit in the picture",
-            options: ["Jackfruit", "Elderberry", "Gooseberry", "Kumquat"],
-            nextq: "Question 4",
-            image: "assets/images/gooseberry.jpg",
-            answer: "Gooseberry",
-            isChecked: false
-        }
-    ];
-
-    $(document).ready(function () {
-
-        $("#start").on("click", function () {
-            $("#instructions").hide();
-            $("#l1").show();
-            $('.answer').prop('disabled', true);
-        });
-        $(".radio").on("click", function(){
-            check(l1);
-        });
-        $(".answer").on("click", function () {
-           getAnswerScreen(l1);           
-           questionsAnswered++;
-            //console.log(questionsAnswered);
-        });
-        $(".next").on("click", function() {
-            console.log(questionsAnswered);
-            updatePage(l1);
-
-
-        });
-
-
-        /*
-                questionGen1(l1q1);
-            });
-            $(".andrew").on("click", check(l1q1));
-            $(".answer").click(function () {
-                console.log("Hello");
-                answerScreen(l1q1);
-                questionGen(l1q2);
-        
-                //$("input").on("click", check(l1q2));
-        
-                $(".answer1").click(function () {
-                    console.log("Hello");
-                    answerScreen(l1q2);
-        
-        
-                });
-                
-                            var arrayofquestion[{ }, { }, { }]
-                
-                            $(button).click(function () {
-                                if radiobuttonisclicked{ }
-                                var answer = $(".checkedradiobbutton.id");
-                                do with answer;
-                           questionsanswered++;
-                                updatpage(questionsanswered);
-                
-                            })
-                            function updatpage(arrayofquestion[questionsanswered]) {
-                
-                            }
-                
-                        });
-                
-        
-        
-                
-                */
-
-
-
-    });
-
-
-
-
-
-
-
-
-
-</script>
