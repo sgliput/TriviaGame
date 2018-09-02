@@ -15,7 +15,7 @@ function introGenerator(objArray) {
 
 
 function getAnswerScreen(objArray) {
-    replace(objArray);
+    
     if (level === 0) {
         $("#l1").hide();
         $("#answerScreen").show();
@@ -48,11 +48,9 @@ function getAnswerScreen(objArray) {
 
     if (objArray[questionsAnswered].isChecked && $(':checked').val() === objArray[questionsAnswered].answer) {
         $(".result").text("Congratulations! That's correct!");
-
         rights++;
     } else {
         $(".result").text("Sorry! That's incorrect!");
-        
         wrongs++;
     }
 
@@ -100,10 +98,10 @@ function updatePage(objArray) {
         console.log($(".radiobtn1").attr("value"));
         console.log(objArray[questionsAnswered].options[0]);
 
-        $("#option1").text(objArray[questionsAnswered].options[0]);
-        $("#option2").text(objArray[questionsAnswered].options[1]);
-        $("#option3").text(objArray[questionsAnswered].options[2]);
-        $("#option4").text(objArray[questionsAnswered].options[3]);
+        $(".option1").text(objArray[questionsAnswered].options[0]);
+        $(".option2").text(objArray[questionsAnswered].options[1]);
+        $(".option3").text(objArray[questionsAnswered].options[2]);
+        $(".option4").text(objArray[questionsAnswered].options[3]);
     } else if (questionsAnswered === 12) {
 
         getResultsScreen(objArray);
@@ -149,40 +147,27 @@ if($(':checked.radiobtn1').val() === objArray[questionsAnswered].answer){
 } else if ($(':checked.radiobtn4').val() === objArray[questionsAnswered].answer){
     $(".radiobtn4").before("<i class='fas fa-check'></i>");
     $(".radiobtn4").hide();
-} else if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
+};
+
+if($(':checked.radiobtn1').val() === objArray[questionsAnswered].incorrect[0] || $(':checked.radiobtn1').val() === objArray[questionsAnswered].incorrect[1] || $(':checked.radiobtn1').val() === objArray[questionsAnswered].incorrect[2]){
     $(".radiobtn1").before("<i class='fas fa-times'></i>");
     $(".radiobtn1").hide();
     
-} else if($(':checked.radiobtn2').val() !== objArray[questionsAnswered].answer){
+} else if($(':checked.radiobtn2').val() === objArray[questionsAnswered].incorrect[0] || $(':checked.radiobtn2').val() === objArray[questionsAnswered].incorrect[1] || $(':checked.radiobtn2').val() === objArray[questionsAnswered].incorrect[2]){
     $(".radiobtn2").before("<i class='fas fa-times'></i>");
     $(".radiobtn2").hide();
     
-} else if($(':checked.radiobtn3').val() !== objArray[questionsAnswered].answer){
+} else if($(':checked.radiobtn3').val() === objArray[questionsAnswered].incorrect[0] || $(':checked.radiobtn3').val() === objArray[questionsAnswered].incorrect[1] || $(':checked.radiobtn3').val() === objArray[questionsAnswered].incorrect[2]){
     $(".radiobtn3").before("<i class='fas fa-times'></i>");
     $(".radiobtn3").hide();
     
-} else if($(':checked.radiobtn4').val() !== objArray[questionsAnswered].answer){
+} else if($(':checked.radiobtn4').val() === objArray[questionsAnswered].incorrect[0] || $(':checked.radiobtn4').val() === objArray[questionsAnswered].incorrect[1] || $(':checked.radiobtn4').val() === objArray[questionsAnswered].incorrect[2]){
     $(".radiobtn4").before("<i class='fas fa-times'></i>");
     $(".radiobtn4").hide();
     
 }
 };
 
-function replaceX(objArray) {
-if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
-    $(".radiobtn1").before("<i class='fas fa-times'></i>");
-    $(".radiobtn1").hide();
-} else if($(':checked.radiobtn2').val() !== objArray[questionsAnswered].answer){
-    $(".radiobtn2").before("<i class='fas fa-times'></i>");
-    $(".radiobtn2").hide();
-} else if ($(':checked.radiobtn3').val() !== objArray[questionsAnswered].answer){
-    $(".radiobtn3").before("<i class='fas fa-times'></i>");
-    $(".radiobtn3").hide();
-} else if ($(':checked.radiobtn4').val() !== objArray[questionsAnswered].answer){
-    $(".radiobtn4").before("<i class='fas fa-times'></i>");
-    $(".radiobtn4").hide();
-}  
-};
 
     var intros = [
         level1 = {
@@ -210,6 +195,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 2",
             image: "assets/images/dragonfruit.jpg",
             answer: "Dragonfruit",
+            incorrect: ["Prickly Pear", "Rambutan", "Guava"],
             isChecked: false
         },
 
@@ -220,6 +206,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 3",
             image: "assets/images/guava.jpg",
             answer: "Guava",
+            incorrect: ["Mangosteen", "Papaya", "Persimmon"],
             isChecked: false
         },
 
@@ -230,6 +217,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 4",
             image: "assets/images/pricklypear.jpg",
             answer: "Prickly Pear",
+            incorrect: ["Horned Melon", "Persimmon", "Passion Fruit"],
             isChecked: false
         },
 
@@ -240,6 +228,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 5",
             image: "assets/images/gooseberry.jpg",
             answer: "Gooseberry",
+            incorrect: ["Jackfruit", "Elderberry", "Kumquat"],
             isChecked: false
         },
 
@@ -250,6 +239,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 6",
             image: "assets/images/goji.jpg",
             answer: "Goji Berry",
+            incorrect: ["Elderberry", "Acai", "Kumquat"],
             isChecked: false
         },
 
@@ -260,6 +250,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 7",
             image: "assets/images/cherimoya.jpg",
             answer: "Cherimoya",
+            incorrect: ["Soursop", "Pawpaw", "Jackfruit"],
             isChecked: false
         },
 
@@ -270,6 +261,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 8",
             image: "assets/images/lychee.jpg",
             answer: "Lychee",
+            incorrect: ["Persimmon", "Soursop", "Pawpaw"],
             isChecked: false
         },
 
@@ -280,6 +272,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 9",
             image: "assets/images/persimmon.jpg",
             answer: "Persimmon",
+            incorrect: ["Pawpaw", "Quince", "Rambutan"],
             isChecked: false
         },
 
@@ -290,6 +283,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 10",
             image: "assets/images/rambutan.jpg",
             answer: "Rambutan",
+            incorrect: ["Persimmon", "Annona", "Durian"],
             isChecked: false
         },
 
@@ -300,6 +294,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 11",
             image: "assets/images/jackfruit.jpg",
             answer: "Jackfruit",
+            incorrect: ["Durian", "Soursop", "Passion Fruit"],
             isChecked: false
         },
 
@@ -310,6 +305,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "Question 12",
             image: "assets/images/mangosteen.jpg",
             answer: "Mangosteen",
+            incorrect: ["Quince", "Durian", "Pawpaw"],
             isChecked: false
         },
 
@@ -320,6 +316,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             nextq: "How'd you do?",
             image: "assets/images/passionfruit.jpg",
             answer: "Passion Fruit",
+            incorrect: ["Pomelo", "Soursop", "Quince"],
             isChecked: false
         }
     ];
@@ -332,8 +329,53 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             varieties: "Cavendish,  Gros Michel,  Formosana,  Red Dacca",
             nextq: "Question 2",
             answer: "Banana",
+            incorrect: ["Apple", "Peach", "Orange"],
             isChecked: false
-        }
+        },
+
+        l2q2 = {
+            name: "l2q2",
+            level: "Level 2, Question 2",
+            options: ["Melon", "Lemon", "Mango", "Pineapple"],
+            varieties: "Santa Claus,  Canary,  Yubari King,  Sprite",
+            nextq: "Question 3",
+            answer: "Melon",
+            incorrect: ["Lemon", "Mango", "Pineapple"],
+            isChecked: false
+        },
+
+        l2q3 = {
+            name: "l2q3",
+            level: "Level 2, Question 3",
+            options: ["Apple", "Banana", "Peach", "Orange"],
+            varieties: "Cavendish,  Gros Michel,  Formosana,  Red Dacca",
+            nextq: "Question 4",
+            answer: "Banana",
+            incorrect: ["Apple", "Peach", "Orange"],
+            isChecked: false
+        },
+
+        l2q4 = {
+            name: "l2q4",
+            level: "Level 2, Question 4",
+            options: ["Apple", "Banana", "Peach", "Orange"],
+            varieties: "Cavendish,  Gros Michel,  Formosana,  Orangeglo",
+            nextq: "Question 5",
+            answer: "Banana",
+            incorrect: ["Apple", "Peach", "Orange"],
+            isChecked: false
+        },
+
+        l2q5 = {
+            name: "l2q5",
+            level: "Level 2, Question 5",
+            options: ["Mango", "Watermelon", "Pear", "Orange"],
+            varieties: "Golden Midget,  Densuke,  Carolina Cross,  Orangeglo",
+            nextq: "Question 6",
+            answer: "Watermelon",
+            incorrect: ["Mango", "Pear", "Orange"],
+            isChecked: false
+        },
 
 
 
@@ -359,7 +401,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
 
         });
         $(".answer").on("click", function () {
-            
+            replace(l1);
             getAnswerScreen(l1);
             questionsAnswered++;
         });
@@ -386,6 +428,7 @@ if($(':checked.radiobtn1').val() !== objArray[questionsAnswered].answer){
             }
         });
         $(".answer2").on("click", function () {
+            replace(l2);
             getAnswerScreen(l2);
             questionsAnswered++;
             //console.log(questionsAnswered);
