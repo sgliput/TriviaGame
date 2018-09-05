@@ -65,6 +65,22 @@ h1{
     padding-left: 45%;
 }
 
-#Intro, #l1, #l2, #answerScreen, #answerScreen2, #resultsScreen{
+.figure1{
+    margin-left: 7%;
+}
+
+.figure2{
+    margin-right: 7%;
+}
+
+#captionimg1, #captionimg2 {
+    font-size: 0.9rem;
+}
+
+#Intro, #l1, #l2, #answerScreen, #answerScreen2, #resultsScreen, #displayTimer{
     display: none;
+}
+
+#displayTimer{
+    font-size: 2rem;
 }
