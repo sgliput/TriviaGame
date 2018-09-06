@@ -17,6 +17,17 @@ function introGenerator(objArray) {
 
 function getAnswerScreen(objArray) {
 
+    $(".radiobtn").attr("name", objArray[questionsAnswered].name);
+    $(".radiobtn1Answer").attr("value", objArray[questionsAnswered].options[0]);
+    $(".radiobtn2Answer").attr("value", objArray[questionsAnswered].options[1]);
+    $(".radiobtn3Answer").attr("value", objArray[questionsAnswered].options[2]);
+    $(".radiobtn4Answer").attr("value", objArray[questionsAnswered].options[3]);
+
+    $(".option1Answer").text(objArray[questionsAnswered].options[0]);
+    $(".option2Answer").text(objArray[questionsAnswered].options[1]);
+    $(".option3Answer").text(objArray[questionsAnswered].options[2]);
+    $(".option4Answer").text(objArray[questionsAnswered].options[3]);
+
     if (levelCount === 0) {
         $("#l1").hide();
         $("#answerScreen").show();
@@ -47,11 +58,12 @@ function getAnswerScreen(objArray) {
             $("#captionimg2").text(objArray[questionsAnswered].caption2);
             $(".figure1").show();
             $(".figure2").show();
-            if (objArray[questionsAnswered].answer == "Tomato") {
+            if (objArray[questionsAnswered].answer === "Tomato") {
                 $(".option3Answer").append("&nbsp;<strong><em>Yes, it's a fruit!</em></strong>");
             }
         
             if(stopwatch2.time === 0){
+                
                 $(".result").html("Sorry! You ran out of time! The answer is actually <strong>" + objArray[questionsAnswered].answer + "</strong>.");
                 questionsAnswered++;
                 unansweredQ++;
@@ -66,16 +78,7 @@ function getAnswerScreen(objArray) {
     }
 
 
-    $(".radiobtn").attr("name", objArray[questionsAnswered].name);
-    $(".radiobtn1Answer").attr("value", objArray[questionsAnswered].options[0]);
-    $(".radiobtn2Answer").attr("value", objArray[questionsAnswered].options[1]);
-    $(".radiobtn3Answer").attr("value", objArray[questionsAnswered].options[2]);
-    $(".radiobtn4Answer").attr("value", objArray[questionsAnswered].options[3]);
-
-    $(".option1Answer").text(objArray[questionsAnswered].options[0]);
-    $(".option2Answer").text(objArray[questionsAnswered].options[1]);
-    $(".option3Answer").text(objArray[questionsAnswered].options[2]);
-    $(".option4Answer").text(objArray[questionsAnswered].options[3]);
+    
 
     
 
@@ -490,7 +493,7 @@ var l2 = [
         img2: "assets/images/morotarocco.jpg",
         caption1: "Jaffa",
         caption2: "Moro Tarocco",
-        incorrect: ["Date", "Pear", "Plum"],
+        incorrect: ["Date", "Tomato", "Plum"],
         isChecked: false
     },
 
