@@ -5,6 +5,7 @@ html{
 body{
     text-align: center;
    height: 100vh;
+   font-family: "Vollkorn", serif;
    
     
 }
@@ -15,6 +16,10 @@ h1{
     color: white;
     text-shadow: -2px 0 green, 0 3px green, 2px 0 green, 0 -2px green;
     
+}
+
+h3, h4, #displayTimer{
+    font-family: 'Righteous', cursive;
 }
 
 .outer{
@@ -35,6 +40,7 @@ h1{
 
 .options{
     background-color: green;
+    font-size: 1.1rem;
     width: 70%;
     height: auto;
     margin: 0 auto;
@@ -47,6 +53,7 @@ h1{
 
 .options2{
     background-color: green;
+    font-size: 1.1rem;
     width: 70%;
     height: auto;
     margin: 0 auto;
